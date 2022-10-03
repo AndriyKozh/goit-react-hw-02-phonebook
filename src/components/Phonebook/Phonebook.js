@@ -1,6 +1,6 @@
 import { PhonebookBlock, PhoneBookDot, PhoneBookBtn } from './PhoneBook.style';
 
-function Phonebook({ contact, listDel }) {
+function Phonebook({ contact, id, listDel }) {
   return (
     <PhonebookBlock>
       <PhoneBookDot></PhoneBookDot>
@@ -10,7 +10,7 @@ function Phonebook({ contact, listDel }) {
       <PhoneBookBtn
         type={'button'}
         onClick={() => {
-          listDel(contact.id);
+          listDel(id);
         }}
       >
         delete
