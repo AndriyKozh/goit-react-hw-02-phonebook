@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { PhonebookBlock, PhoneBookDot, PhoneBookBtn } from './PhoneBook.style';
 
 function Phonebook({ contact, id, listDel }) {
@@ -18,5 +20,11 @@ function Phonebook({ contact, id, listDel }) {
     </PhonebookBlock>
   );
 }
+
+Phonebook.propTypes = {
+  contact: PropTypes.objectOf(PropTypes.string).isRequired,
+  listDel: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
+};
 
 export default Phonebook;

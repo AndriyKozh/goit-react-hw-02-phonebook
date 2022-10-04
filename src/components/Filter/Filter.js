@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
+
 import { FilterLable, FilterInput, FilterBlock } from './Filter.style';
 
 function Filter({ value, onChange }) {
-  console.log(value);
-
   return (
     <FilterBlock>
       <FilterLable>
@@ -12,5 +12,10 @@ function Filter({ value, onChange }) {
     </FilterBlock>
   );
 }
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default Filter;
