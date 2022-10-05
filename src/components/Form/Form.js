@@ -73,7 +73,7 @@ class Form extends Component {
   }
 }
 
-Form.protoType = {
+Form.protoTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
